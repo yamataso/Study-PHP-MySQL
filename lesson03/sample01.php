@@ -9,10 +9,10 @@
 <body>
     <?php
     $db = new mysqli("localhost:8889", "root", "root", "mydb");
-    $db->query("drop table if exists test");
-    $success = $db->query("create table test(id INT)");
+    $db -> query("drop table if exists test");
+    $success = $db ->query("create table test(ID INT)");
     if ($success) {
-        echo "テーブルは削除して、作成しました";
+        echo "テーブルを削除して、作成しました";
     }else{
         echo "SQLが正常に動作しませんでした";
         echo $db->error;
